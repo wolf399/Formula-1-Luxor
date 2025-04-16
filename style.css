@@ -1,0 +1,270 @@
+* {
+    font-family: 'Roboto', sans-serif; /* Or 'Open Sans', sans-serif */
+}
+
+body {
+    background: #f4f8fb; /* Light, calming background color */
+}
+
+.plan_container .subheader {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 5px;
+}
+
+.plan_container .section_header {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.plan_container .description {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.plan_grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.plan_content {
+    margin-left: 100px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.plan_content .number {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(53, 41, 96);
+    border-radius: 2rem;
+}
+
+.plan_content .number:nth-of-type(2) {
+    background-color: #321208;
+}
+.plan_content .number:nth-of-type(3) {
+    background-color: #ffcca3;
+}
+
+.plan_content h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.plan_content p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+.plan_image {
+    flex: 1;
+    position: relative;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.plan_image img {
+    position: absolute;
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 90px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plan_image img:nth-child(1) {
+    z-index: 3;
+    transform: translate(-150px, -50px);
+}
+.plan_image img:nth-child(2) {
+    z-index: 2;
+    transform: translate(0, -90px);
+}
+.plan_image img:nth-child(3) {
+    z-index: 1;
+    transform: translate(150px, -50px);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .plan_image {
+        position: static;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        min-height: auto;
+    }
+
+    .plan_image img {
+        position: static;
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        border-radius: 20px;
+        transform: none !important;
+    }
+}
+
+.section-padding{
+    padding: 100px 0;
+}
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    box-shadow: none !important;
+}
+.carousel-caption{
+    
+    bottom: 100;
+    z-index: 1;
+}
+.carousel-caption h5 {
+    font-size: 3rem; /* responsive and cleaner than fixed px */
+    color: #eacece;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7); /* subtle lift for readability */
+}
+
+
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/* Navbar Link Styling */
+.navbar-nav a {
+    font-size: 15px; /* Font size for navbar links */
+    text-transform: uppercase; /* Uppercase text for navbar items */
+    font-weight: 500; /* Semi-bold font weight */
+    color: #000; /* Default color for navbar links */
+}
+
+/* Hover and Focus State for Navbar Brand */
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+    color: #000; /* Change color to black on hover/focus */
+}
+
+/* Styling for Navbar Links */
+.navbar-light .navbar-nav .nav-link {
+    color: #000; /* Ensure links are black */
+}
+
+/* Hover State for Navbar Links */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Change color on hover (Yellow) */
+}
+
+/* Optional: Add smooth transition on hover */
+.navbar-nav a, .navbar-light .navbar-brand {
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.w-100{
+    height: 100vh;
+}
+
+.services .card-body i{
+    font-size: 30px;
+}
+
+.team .card-body{
+    font-size: 20px;
+
+}
+.portfolio .card {
+    box-shadow: 25px 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow on the right */
+}
+.team .card {
+    box-shadow: 20px 10px 40px rgba(0, 0, 0, 0.2); /* More shadow on the right */
+
+}
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .carousel-caption{
+        bottom: 370px;
+
+    }
+    .carousel-caption p{
+        width: 100%;
+
+    }
+    .card{
+        margin-bottom: 50px;
+    }
+    .img-area img{
+        width: 100%;
+
+    }
+  
+}
+@media screen and (max-width: 767px){
+    .navbar-nav{
+        text-align: center;
+    }
+    .carousel-caption{
+        bottom: 125px; 
+    }
+    .carousel-caption h5{
+        font-size: 17px;
+
+    }
+    .carousel-caption a {
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
+    }
+
+}
+@media screen and (min-width: 656px) and (max-width: 991px){
+    .card{
+        margin-bottom: 30px;
+    }
+    .carousel-caption{
+        margin-bottom: 235px;
+        font-size: 20px;
+    }
+    .about-text{
+        margin-top: 20px;
+    }
+}
